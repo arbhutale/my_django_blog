@@ -91,7 +91,7 @@ DATABASES = {
 
     "default": {
         "ENGINE"  :  os.environ("DB_ENGINE"  , default="django.db.backends.sqlite3"),
-        "NAME"    :  os.environ("DB_NAME", default=os.path.join(BASE_DIR, "db.sqlite3")),
+        "NAME"    :  os.environ("DB_NAME", default='postgres'")),
         "USER"    :  os.environ("DB_USER"    , default=None),
         "PASSWORD":  os.environ("DB_PASSWORD", default=None),
         "HOST"    :  os.environ("DB_HOST"    , default=None),
