@@ -90,12 +90,12 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 DATABASES = {
 
     "default": {
-        "ENGINE"  :  os.environ("DB_ENGINE"  , default="django.db.backends.sqlite3"),
-        "NAME"    :  os.environ("DB_NAME", default="postgres"),
-        "USER"    :  os.environ("DB_USER"    , default=None),
-        "PASSWORD":  os.environ("DB_PASSWORD", default=None),
-        "HOST"    :  os.environ("DB_HOST"    , default=None),
-        "PORT"    :  os.environ("DB_PORT"    , default=None),
+        "ENGINE"  :  os.environ("DB_ENGINE"),
+        "NAME"    :  os.environ("DB_NAME"),
+        "USER"    :  os.environ("DB_USER"),
+        "PASSWORD":  os.environ("DB_PASSWORD"),
+        "HOST"    :  os.environ("DB_HOST"),
+        "PORT"    :  os.environ("DB_PORT"),
     }
 
 }
