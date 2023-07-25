@@ -87,18 +87,16 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 # }
 
 
-DATABASES = {
+'default': {
 
-    "default": {
-        "ENGINE"  :  os.environ("DB_ENGINE"),
-        "NAME"    :  os.environ("DB_NAME"),
-        "USER"    :  os.environ("DB_USER"),
-        "PASSWORD":  os.environ("DB_PASSWORD"),
-        "HOST"    :  os.environ("DB_HOST"),
-        "PORT"    :  os.environ("DB_PORT"),
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': os.environ.get('DB_NAME'),
+        'USER': os.environ.get('DB_USER'),
+        'PASSWORD': os.environ.get('DB_PASSWORD'),
+        'HOST': os.environ.get('DB_HOST'),
+        'PORT': os.environ.get('DB_PORT'),
+
     }
-
-}
 
 
 # Password validation
